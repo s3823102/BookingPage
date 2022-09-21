@@ -1,4 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+import 'form_page.dart';
 
 
 class HomePage extends StatefulWidget
@@ -94,7 +97,7 @@ class _HomeState extends State<HomePage>
                decoration: BoxDecoration
                  (
                  color: Colors.white60,
-                 borderRadius: BorderRadius.circular(5),
+                 borderRadius: BorderRadius.circular(15),
                  boxShadow:
                  const [
                      BoxShadow
@@ -125,7 +128,7 @@ class _HomeState extends State<HomePage>
                          autofocus: false,
                          style: TextStyle
                            (
-                           color: Color(0xff107163),
+                           color: Colors.white,
                            fontSize: 22,
 
                          ),
@@ -165,22 +168,37 @@ class _HomeState extends State<HomePage>
             Container
               (
               width: size.width,
+              margin: const EdgeInsets.only(top:20, left: 20),
               child: Stack
                 (
                 fit: StackFit.loose,
                 children:
                 [
-                  Container
-                    (
-                    child: const Text
+                  GestureDetector(
+                    onTap: ()
+                    {
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => const FormPage(),
+                      ),
+                      );
+                    },
+
+                    child: Container
                       (
-                      "Category",
-                      style: TextStyle
+                      child: const Align
                         (
-                        color: Color(0xff363636),
-                        fontSize: 21,
-                        fontFamily: 'Roboto',
-                        fontWeight: FontWeight.w700,
+                        alignment: Alignment.center,
+                        child: Text
+                          (
+                          "Book a doctor",
+                          style: TextStyle
+                            (
+                            color: Color(0xff363636),
+                            fontSize: 28,
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
                       ),
                     ),
                   ),
