@@ -90,8 +90,8 @@ class _FormPage extends State<FormPage>
         ),
       ),
           Container(
-            padding: const EdgeInsets.all(15),
-            decoration: const BoxDecoration
+            padding:  EdgeInsets.all(15),
+            decoration: BoxDecoration
               (
               color: Colors.white,
             ),
@@ -99,9 +99,9 @@ class _FormPage extends State<FormPage>
 
             DropdownButton<String>(
             value: dropdownValue,
-            icon: const Icon(Icons.arrow_downward),
+            icon: Icon(Icons.arrow_downward),
             elevation: 16,
-            style: const TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black),
             underline: Container(
               height: 2,
               color: Colors.white,
